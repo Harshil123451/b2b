@@ -84,19 +84,34 @@ Row Level Security (RLS) is enabled to ensure users can only access their own da
 
 ## Deployment to Vercel
 
-1. Push your code to GitHub (or your preferred Git provider)
+### Quick Start
 
-2. Go to [Vercel](https://vercel.com) and sign in
+1. **Push to GitHub** (if not already done)
+   ```bash
+   git add .
+   git commit -m "Ready for deployment"
+   git push origin main
+   ```
 
-3. Click **New Project** and import your repository
+2. **Deploy on Vercel**
+   - Go to [vercel.com](https://vercel.com) and sign in with GitHub
+   - Click **"Add New..."** → **"Project"**
+   - Import your GitHub repository
+   - Add environment variables:
+     - `NEXT_PUBLIC_SUPABASE_URL` = Your Supabase project URL
+     - `NEXT_PUBLIC_SUPABASE_ANON_KEY` = Your Supabase anon key
+   - Click **"Deploy"**
 
-4. Add your environment variables:
-   - `NEXT_PUBLIC_SUPABASE_URL`
-   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+3. **Get Your Keys from Supabase**
+   - Supabase Dashboard → Settings → API
+   - Copy **Project URL** → `NEXT_PUBLIC_SUPABASE_URL`
+   - Copy **anon public key** → `NEXT_PUBLIC_SUPABASE_ANON_KEY`
 
-5. Click **Deploy**
+4. **Wait for Deployment** (2-3 minutes)
 
-Your app will be live at a Vercel URL! 🚀
+Your app will be live at `https://your-project.vercel.app`! 🚀
+
+📖 **Detailed instructions**: See [DEPLOYMENT.md](./DEPLOYMENT.md) for complete deployment guide.
 
 ## Project Structure
 
